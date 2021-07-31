@@ -1,0 +1,26 @@
+.btn {
+    display: block;
+    height: 45px;
+    width: 160px;
+    background-color: $main-color;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 40px;
+    transition: 0.5s all;
+
+    &:hover {
+        background-color: #dc5238;
+    }
+
+    &_big {
+        width: 230px;
+        height: 57px;
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: 700;
+        padding: 22px 43px;
+    }
+}

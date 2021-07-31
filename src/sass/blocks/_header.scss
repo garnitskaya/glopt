@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-right: 55px;
+    }
+
+    .nav {
+        margin-right: 50px;
+
+        &__menu {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__link {
+            padding-right: 10px;
+            font-size: 15px;
+            line-height: 23px;
+            border-right: 1px dashed #8e9197;
+
+            a {
+                color: #ffffff;
+                transition: all 0.6s;
+
+                &:hover {
+                    color: $main-color;
+                    border-bottom: 1px solid $main-color;
+                }
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__contacts {
+        margin-right: 17px;
+        width: 161px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        span {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 300;
+            color: #ffffff;
+        }
+    }
+
+    &__phone {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.25px;
+    }
+}

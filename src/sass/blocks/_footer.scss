@@ -1,0 +1,60 @@
+.footer {
+    padding: 24px 0 28px;
+
+    background-color: #25333c;
+
+    .header {
+        margin-bottom: 26px;
+
+        &__logo {
+            width: 68px;
+            height: 71px;
+            margin-right: 43px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            margin-right: 280px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+    }
+
+    &__info {
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 300;
+        padding-top: 20px;
+        border-top: 1px solid rgba($color: #fff, $alpha: .3);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright {
+            opacity: 0.6;
+            color: #ffffff;
+        }
+
+        .policy {
+            margin-right: 230px;
+            text-decoration: underline;
+            color: $main_color;
+        }
+
+        .creation {
+            display: flex;
+            align-items: center;
+
+            &__text {
+                opacity: 0.6;
+                color: #ffffff;
+                margin-right: 10px;
+            }
+        }
+    }
+}
