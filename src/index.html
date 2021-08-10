@@ -284,7 +284,8 @@
                     <img src="icons/prices/consultation.png" alt="consultation">
                 </div>
                 <input class="input" required type="text" name="name" placeholder="Ваше имя...">
-                <input class="input" required type="phone" name="phone" placeholder="Ваш номер телефона...">
+                <input class="input" required maxlength="13" type="phone" name="phone"
+                    placeholder="Ваш номер телефона...">
                 <input class="input" required type="email" name="email" placeholder="Ваш e-mail...">
                 <button class="btn form__btn">Отправить заявку</button>
             </form>
@@ -437,7 +438,8 @@
             <form action="#" class="form questions__form ">
                 <div class="input-flex">
                     <input class="input" required type="text" name="name" placeholder="Ваше имя...">
-                    <input class="input" required type="phone" name="phone" placeholder="Ваш номер телефона...">
+                    <input class="input" required type="phone" name="phone" placeholder="Ваш номер телефона..."
+                        maxlength="13">
                     <input class="input" required type="email" name="email" placeholder="Ваш e-mail...">
                 </div>
                 <textarea class="questions__textarea" name="text" placeholder="Сообщение..."></textarea>
@@ -492,8 +494,8 @@
         </div>
     </footer>
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>-->
     <script src="js/script.js"></script>
 </body>
 

@@ -1,3 +1,5 @@
+//Burger
+
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.nav__menu'),
         menuItem = document.querySelectorAll('.nav__link'),
@@ -17,9 +19,24 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//Mask
+//$('input[name=phone]').mask("+3(999) 999-99-99");
 
-$('input[name=phone]').mask("+3(999) 999-99-99");
+const numInput = document.querySelectorAll('input[name=phone]');
 
+numInput.forEach(item => {
+    item.addEventListener('focus', () => {
+        if (!/^\+\d*$/.test(numInput.value)) {
+            item.value = '+380';
+        }
+    });
+    item.addEventListener('keypress', (e) => {
+        if (!/\d/.test(e.key))
+            e.preventDefault();
+    });
+})
+
+//Slider
 const prev = document.getElementById('btn-prev'),
     next = document.getElementById('btn-next'),
     slides = document.querySelectorAll('.reviews__slide'),
@@ -27,50 +44,15 @@ const prev = document.getElementById('btn-prev'),
 
 let index = 0;
 
-
-//const showSlides = () => {
-//    for (let i = 0; i < slides.length; i++) {
-//        slides[i].classList.remove('reviews__slide_active');
-//    }
-//    index++;
-//    if (index > slides.length) { index = 1 }
-//    slides[index - 1].classList.add('reviews__slide_active');
-//    setTimeout(showSlides, 2000);
-//}
-//showSlides();
-
-//const showDots = () => {
-//    for (let i = 0; i < dots.length; i++) {
-//        dots[i].classList.remove('active');
-//    }
-//    index++;
-//    if (index > dots.length) { index = 1 }
-//    dots[index - 1].classList.add('active');
-//    setTimeout(showDots, 2000);
-//}
-//showDots();
-
-const activeSlide = n => {
-    for (reviews__slide of slides) {
-        console.log(reviews__slide);
-        reviews__slide.classList.remove('reviews__slide_active');
+const activeSlide = (n) => {
+    for (slide of slides) {
+        slide.classList.remove('reviews__slide_active');
     }
     slides[n].classList.add('reviews__slide_active');
 };
 
-
-const activeDot = n => {
-    for (dot of dots) {
-        console.log(reviews__slide);
-        dot.classList.remove('active');
-    }
-    dots[n].classList.add('active');
-};
-
-
-const prepareCurrentSlide = ind => {
+const prepareCurrentSlide = () => {
     activeSlide(index);
-    activeDot(index);
 }
 
 const nextSlide = () => {
@@ -94,13 +76,6 @@ const prevSlide = () => {
     }
 };
 
-dots.forEach((item, indexDot) => {
-    item.addEventListener('click', () => {
-        index = indexDot;
-        prepareCurrentSlide(index);
-    });
-
-})
 
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
