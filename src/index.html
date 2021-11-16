@@ -24,22 +24,22 @@
                 <nav class="nav">
                     <ul class="nav__menu">
                         <li class="nav__link">
-                            <a href="#">Преимущества</a>
+                            <a href="#advantages">Преимущества</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">Наша работа</a>
+                            <a href="#work">Наша работа</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">Цены</a>
+                            <a href="#prices">Цены</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">Схема работы</a>
+                            <a href="#schema">Схема работы</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">Отзывы</a>
+                            <a href="#reviews">Отзывы</a>
                         </li>
                         <li class="nav__link">
-                            <a href="#">Контакты</a>
+                            <a href="#map">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -89,7 +89,7 @@
             </div>
         </div>
     </section>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <div class="container">
             <h2 class="title">Преимущества работы с GlobalOpt</h2>
             <div class="advantages__blocks">
@@ -159,7 +159,7 @@
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
         <div class="container">
             <h2 class="title">Наша работа - больше чем просто доставка</h2>
             <div class="divider"></div>
@@ -221,7 +221,7 @@
             </div>
         </div>
     </section>
-    <section class="prices">
+    <section class="prices" id="prices">
         <div class="container">
             <h2 class="title">Цены на любой вариант доставки</h2>
             <div class="divider"></div>
@@ -284,7 +284,7 @@
                     <img src="icons/prices/consultation.png" alt="consultation">
                 </div>
                 <input class="input" required type="text" name="name" placeholder="Ваше имя...">
-                <input class="input" required maxlength="13" type="phone" name="phone"
+                <input class="input" required maxlength="13" type="tel" name="phone"
                     placeholder="Ваш номер телефона...">
                 <input class="input" required type="email" name="email" placeholder="Ваш e-mail...">
                 <button class="btn form__btn">Отправить заявку</button>
@@ -304,7 +304,7 @@
             </div>
         </div>
     </section>
-    <section class="schema">
+    <section class="schema" id="schema">
         <div class="container">
             <h2 class="title">Схема работы с нами</h2>
             <div class="schema__items">
@@ -367,7 +367,7 @@
             </div>
         </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <h2 class="title">отзывы наших клиентов</h2>
             <div class="divider"></div>
@@ -429,7 +429,7 @@
         </div>
     </section>
 
-    <section class="questions">
+    <section class="questions" id="questions">
         <div class="container">
             <div class="questions__header">
                 <h2 class="questions__title">Остались вопросы?</h2>
@@ -438,7 +438,7 @@
             <form action="#" class="form questions__form ">
                 <div class="input-flex">
                     <input class="input" required type="text" name="name" placeholder="Ваше имя...">
-                    <input class="input" required type="phone" name="phone" placeholder="Ваш номер телефона..."
+                    <input class="input" required type="tel" name="phone" placeholder="Ваш номер телефона..."
                         maxlength="13">
                     <input class="input" required type="email" name="email" placeholder="Ваш e-mail...">
                 </div>
@@ -449,7 +449,7 @@
         </div>
     </section>
 
-    <section class="map">
+    <section class="map" id="map">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.6063717386096!2d37.62502931603512!3d55.74796799983219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54af8f4b2bb81%3A0x45d8b81f41916c35!2z0KHQsNC00L7QstC90LjRh9C10YHQutCw0Y8g0YPQuy4sIDUsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTUwMzU!5e0!3m2!1sru!2sua!4v1619608413391!5m2!1sru!2sua"
             allowfullscreen=""></iframe>
@@ -461,6 +461,21 @@
             <a class="map__email" href="mailto:info@glopt.ru">info@glopt.ru</a>
         </div>
     </section>
+
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Оставьте ваш вопрос здесь</div>
+            <form action="#" class="modal__form">
+                <input required name="name" class="input" type="text" placeholder="Ваше имя...">
+                <input required name="phone" class="input" type="tel" placeholder="Ваш номер телефона" maxlength="13">
+                <input required name="email" class="input" type="email" placeholder="Ваш e-mail...">
+                <textarea required name="text" class="input input__text" name="text"
+                    placeholder="Ваше сообщение..."></textarea>
+                <button class="btn">Отправить</button>
+            </form>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -493,6 +508,20 @@
 
         </div>
     </footer>
+
+    <a class="pageup">
+        <svg version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 314.069 314.069"
+            style="enable-background:new 0 0 314.069 314.069;" xml:space="preserve" fill="#ec644b">
+            <g>
+                <g id="_x34_99._Up">
+                    <g>
+                        <path
+                            d="M293.003,78.531C249.646,3.436,153.619-22.295,78.529,21.061C3.434,64.411-22.297,160.443,21.067,235.542     c43.35,75.087,139.375,100.822,214.465,57.467C310.628,249.648,336.371,153.621,293.003,78.531z M219.835,265.802     c-60.067,34.685-136.894,14.114-171.576-45.961C13.577,159.762,34.161,82.943,94.23,48.261     c60.071-34.69,136.894-14.106,171.578,45.971C300.493,154.308,279.906,231.118,219.835,265.802z M168.132,121.034     c-3.066-3.07-7.077-4.599-11.097-4.599c-4.018,0-8.031,1.529-11.101,4.599l-44.409,44.406c-6.133,6.128-6.133,16.078,0,22.206     v-0.009c6.129,6.132,16.076,6.132,22.201,0l33.308-33.299l33.298,33.299c6.135,6.132,16.077,6.132,22.201,0v0.009     c6.135-6.128,6.135-16.078,0-22.206L168.132,121.034z" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </a>
 
     <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>-->
