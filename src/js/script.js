@@ -3,24 +3,21 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
     //Burger
 
-    window.addEventListener('DOMContentLoaded', () => {
-        const menu = document.querySelector('.nav__menu'),
-            menuItem = document.querySelectorAll('.nav__link'),
-            hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.nav__menu'),
+        menuItem = document.querySelectorAll('.nav__link'),
+        hamburger = document.querySelector('.hamburger');
 
-        hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('nav__menu_active');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
             hamburger.classList.toggle('hamburger_active');
             menu.classList.toggle('nav__menu_active');
         });
-
-        menuItem.forEach(item => {
-            item.addEventListener('click', () => {
-                hamburger.classList.toggle('hamburger_active');
-                menu.classList.toggle('nav__menu_active');
-            });
-        });
     });
-
 
     //Mask
     //$('input[name=phone]').mask("+3(999) 999-99-99");
@@ -68,7 +65,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
         }
     };
 
-
     const prevSlide = () => {
         if (index == 0) {
             index = slides.length - 1;
@@ -78,7 +74,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
             prepareCurrentSlide(index);
         }
     };
-
 
     next.addEventListener('click', nextSlide);
     prev.addEventListener('click', prevSlide);
