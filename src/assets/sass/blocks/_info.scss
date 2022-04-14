@@ -1,0 +1,21 @@
+.info {
+    padding: 58px 0 75px;
+    background: url('../img/info.jpg') center center/cover no-repeat;
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 102px;
+        height: 102px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+        margin: 0 auto 20px;
+    }
+    .subtitle {
+        margin: 15px auto 0;
+        max-width: 985px;
+    }
+    &_more {
+        background: url('../img/managers.jpg') center center/cover no-repeat;
+    }
+}
